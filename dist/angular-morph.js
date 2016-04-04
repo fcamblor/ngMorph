@@ -303,7 +303,7 @@
       scope: true,
       link: function (scope, element, attrs) {
         var wrapper = angular.element('<div></div>').css('visibility', 'hidden');
-        var settings = scope[attrs.ngMorphModal];
+        var settings = _.get(scope, attrs.ngMorphModal);
         var isMorphed = false;
 
         var compile = function (results) {
