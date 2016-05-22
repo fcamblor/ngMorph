@@ -386,7 +386,7 @@
       scope: true,
       link: function (scope, element, attrs) {
         var wrapper = angular.element('<div></div>').css('visibility', 'hidden');
-        var settings = scope[attrs.ngMorphOverlay];
+        var settings = scope.$eval(attrs.ngMorphOverlay);
         var isMorphed = false;
 
         var compile = function (results) {
