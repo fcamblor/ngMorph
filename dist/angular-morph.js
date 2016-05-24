@@ -327,7 +327,11 @@
 
           // add to dom
           wrapper.append(content);
-          element.after(wrapper);
+          if(settings.target) {
+            $(settings.target).append(wrapper);
+          } else {
+            element.after(wrapper);
+          }
           if (fade) wrapper.after(fade);
           
           // set the wrapper bg color
@@ -404,7 +408,11 @@
 
           // add to dom
           wrapper.append(content);
-          element.after(wrapper);
+          if(settings.target) {
+            $(settings.target).append(wrapper);
+          } else {
+            element.after(wrapper);
+          }
 
           // set the wrapper bg color
           wrapper.css('background', getComputedStyle(content[0]).backgroundColor);
